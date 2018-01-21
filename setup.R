@@ -3,10 +3,10 @@ library(tidyr)
 library(lubridate)
 
 #Imports subset of columns from datasets
-importData <- function(dir, area="TA", mth=11, measure) {
+importData <- function(dir, area="TA", mth=12, measure) {
   
   if (area == "TA") {
-    names <- c("Month", "Wellington", "Dunedin", "Tauranga.District")
+    names <- c("Month", "Wellington", "Dunedin")
   }
   
   filter(read.csv(dir),
