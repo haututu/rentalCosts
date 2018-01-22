@@ -12,6 +12,7 @@ meanDecPlot <- ggplot(filter(rentData, year(Month) > 2008), aes(as.Date(Month), 
     plot.background = element_rect(fill = "#ecf0f1"), 
     panel.background = element_rect(fill = "#ecf0f1"),
     legend.background = element_rect(fill = "#ecf0f1"),
+    panel.border = element_rect(fill = "#ecf0f1"),
     plot.title = element_text(hjust = 0.5)
     ) +
   labs(
@@ -30,6 +31,7 @@ quartDecPlot <- ggplot(filter(rentData, year(Month) > 2008), aes(as.Date(Month),
     plot.background = element_rect(fill = "#ecf0f1"), 
     panel.background = element_rect(fill = "#ecf0f1"),
     legend.background = element_rect(fill = "#ecf0f1"),
+    panel.border = element_rect(fill = "#ecf0f1"),
     plot.title = element_text(hjust = 0.5)
   ) +
   labs(
