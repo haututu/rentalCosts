@@ -52,8 +52,7 @@ library(ggplot2)
 library(plotly)
 
 #Plot for december months, geometric mean
-ggplotly(
-  ggplot(filter(taMean, year(Month) > 2008), aes(as.Date(Month), mean, group=area, color=area)) +
+ggplot(filter(taMean, year(Month) > 2008), aes(as.Date(Month), mean, group=area, color=area)) +
     geom_point() +
     geom_line() +
     theme_classic() +
@@ -67,9 +66,7 @@ ggplotly(
       y="Geometric mean",
       x="Year",
       color="City"
-      ),
-  tooltip = c("mean")
-  )
+      )
 ```
 <br>
 If we look more closely at the numbers we can support that between the last two Decembers rent in Wellington increased by $43 (9.7%). Yet in the period before that we see a similar $43 (10.7%) increase. I have also compared the lower quartiles which show a similar trend, making it unlikely that lower rent student flats are not being effected. Do note though, that this is only lodged bonds and any changes in rent to people continuing their tenancy will not be captured. Although I'm assuming it's less of a problem for students who are more likely to take up a new tenency each year.
