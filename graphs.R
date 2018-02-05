@@ -1,3 +1,6 @@
+#Cleans and loads the base data
+source("setup.R")
+
 library(ggplot2)
 library(plotly)
 
