@@ -1,6 +1,10 @@
+#Loads and cleans the data
+source("setup.R")
+
 library(knitr)
 library(kableExtra)
 
+#Calculates percentage differences in rent after 2012
 tableData <- filter(taMean, year(Month) > 2012) %>% 
   select(Month, area, mean) %>%
   group_by(area) %>%
@@ -9,6 +13,7 @@ tableData <- filter(taMean, year(Month) > 2012) %>%
   ungroup() %>%
   select(-area)
 
+#Produces HTML which can be copied into markdown document
 kable(tableData,
       col.names = c("", "Average(\\$)", "Change(\\$)", "Percent change (%)"),
       "html"
