@@ -1,3 +1,5 @@
+source("setup.R")
+
 library(ggplot2)
 library(plotly)
 
@@ -9,10 +11,9 @@ meanDecPlot <- ggplot(filter(rentData, year(Month) > 2008), aes(as.Date(Month), 
   geom_line() +
   theme_classic() +
   theme(
-    plot.background = element_rect(fill = "#ecf0f1"), 
+    plot.background = element_rect(fill = "#ecf0f1", color=NA), 
     panel.background = element_rect(fill = "#ecf0f1"),
     legend.background = element_rect(fill = "#ecf0f1"),
-    panel.border = element_rect(fill = "#ecf0f1"),
     plot.title = element_text(hjust = 0.5)
     ) +
   labs(
@@ -31,11 +32,11 @@ quartDecPlot <- ggplot(filter(rentData, year(Month) > 2008), aes(as.Date(Month),
     plot.background = element_rect(fill = "#ecf0f1"), 
     panel.background = element_rect(fill = "#ecf0f1"),
     legend.background = element_rect(fill = "#ecf0f1"),
-    panel.border = element_rect(fill = "#ecf0f1"),
+    panel.border = element_rect(color="#ecf0f1", size=0.5, linetype="solid"),
     plot.title = element_text(hjust = 0.5)
   ) +
   labs(
-    title="Lower quartile ren for December",
+    title="Lower quartile rent for December",
     y="Geometric mean",
     x="Year",
     color="City"
@@ -43,4 +44,3 @@ quartDecPlot <- ggplot(filter(rentData, year(Month) > 2008), aes(as.Date(Month),
 
 #Save the plots
 ggsave("images/meanDecPlot.svg", plot=meanDecPlot, device="svg", width=7, height=5)
-

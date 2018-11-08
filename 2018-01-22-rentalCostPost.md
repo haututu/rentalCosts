@@ -5,6 +5,7 @@ date: "2018-01-21"
 excerpt: "Investigating if rent has increased after changes to student loans"
 tags: [R, timeseries, rent]
 ---
+<body style="background-color:powderblue;">
 
 Are landlords cashing in on student loan changes ?
 
@@ -21,7 +22,7 @@ In the graph below we can see the average[^1] rent for dwellings in Wellington a
 
 [^1]: The average was caluclated using the [geometric mean](https://en.wikipedia.org/wiki/Geometric_mean), it's basically a mean that is less sensitive to outliers.
 
-![](images/meanDecPlot.svg)
+![](images/meanDecPlot.png)
 
 <br>
 If we look more closely at the numbers we can support that between the last two Decembers rent in Wellington increased by $43 (9.7%). Yet in the period before that we see a similar $43 (10.7%) increase. I have also compared the lower quartiles which show a similar trend, making it unlikely that lower rent student flats are not being effected. Do note though, that this is only lodged bonds and any changes in rent to people continuing their tenancy will not be captured. Although I'm assuming it's less of a problem for students who are more likely to take up a new tenency each year.
